@@ -42,3 +42,24 @@
 /* Preserve each artwork's original portrait proportions rather than squashing it. */
 .book[class] .page{width:100%;aspect-ratio:768 / 1376;height:auto;background-size:100% 100%}
 @media(max-width:700px){.book .page.left,.book .page.right{min-height:0}.book .page{padding-top:60px;padding-bottom:60px}}
+/* Keep wishes inside each artwork's quiet central writing area. */
+.book[class] .page{box-sizing:border-box;padding:48% 19% 31%;justify-content:center}
+.book[class] .page:before,.book[class] .page:after{display:none}
+.book[class] .page h2{font-size:clamp(29px,3.6vw,43px);line-height:1.08;margin:12px 0}
+.book[class] .page .message{font-size:clamp(18px,2vw,21px);line-height:1.35;margin:8px 0;max-width:100%}
+.book[class] .page .signature{font-size:20px;margin-top:12px}
+.book[class] .page .diya{margin-top:10px}
+.book[class] .page.left .badge{margin-top:15px}
+.book[class] .page.left .photo{max-width:65%;height:auto;aspect-ratio:1}
+.book.cosmic .page{padding-top:53%;padding-bottom:31%}
+.book.minimal .page{padding:43% 23% 38%}
+.book.traditional .page{padding-top:54%;padding-bottom:31%}
+.book.rose .page{padding:48% 25% 40%}
+.book.emerald .page{padding:41% 20% 36%}
+.book.lotus .page{padding:35% 19% 33%}
+@media(max-width:700px){.book[class] .page{padding:48% 19% 31%}.book.cosmic .page{padding-top:53%;padding-bottom:31%}.book.minimal .page{padding:43% 23% 38%}.book.traditional .page{padding-top:54%;padding-bottom:31%}.book.rose .page{padding:48% 25% 40%}.book.emerald .page{padding:41% 20% 36%}.book.lotus .page{padding:35% 19% 33%}.book[class] .page h2{font-size:clamp(29px,8vw,39px)}.book[class] .page .message{font-size:clamp(18px,5vw,21px);line-height:1.3}.book[class] .page .signature{font-size:19px}}
+/* Long wishes may grow a page instead of spilling into the artwork or outside the card. */
+.book[class] .page{min-height:min-content;flex-shrink:0}
+.book-space{container-type:inline-size}
+.book[class] .page{aspect-ratio:auto;min-height:calc(50cqw * 1.7917)}
+@media(max-width:700px){.book[class] .page{min-height:calc(100cqw * 1.7917)}}
