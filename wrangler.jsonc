@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "happydiwali",
+  "main": "worker.js",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": true,
+  "assets": { "directory": ".", "binding": "ASSETS", "run_worker_first": ["/api/*"] },
+  "vars": { "PAYPAL_MODE": "sandbox", "PAYPAL_CURRENCY": "USD", "PAYPAL_PRICE": "0.12" }
+}
